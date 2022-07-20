@@ -1,15 +1,20 @@
-public class Boss extends GameEnity {
-    private String nameWeapon;
-private String nameWeapon2;
-    public String getNameWeapon() {
-        return nameWeapon;
+public class Boss extends GameEntity {
+    Weapon weaponType = new Weapon();
+
+    public Boss(int health, int damage) {
+        super(health, damage);
+
     }
 
-    public void setNameWeapon(String nameWeapon) {
-        this.nameWeapon = nameWeapon;
+    public Weapon getWeaponType() {
+        return weaponType;
     }
-    public String printinfo(){
 
-        return printinfo();
+    public void setWeaponType(Weapon weaponType) {
+        this.weaponType = weaponType;
+    }
+
+    public String info (){
+        return  getType() + getDamage() + weaponType.getWeaponName() + getWeaponType() ;
     }
 }

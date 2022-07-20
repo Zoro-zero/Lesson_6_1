@@ -1,9 +1,10 @@
-public class GameEnity {
-    int health;
-    int damage;
+class GameEntity {
+    public int getType() {
+        return Health;
+    }
 
-    public int getHealth() {
-        return health;
+    public void setType(int type) {
+        this.Health = type;
     }
 
     public int getDamage() {
@@ -14,7 +15,14 @@ public class GameEnity {
         this.damage = damage;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public GameEntity(int type, int damage) {
+        this.Health = type;
+        this.damage = damage;
     }
+
+    private int Health;
+
+
+    private int damage;
+
 }

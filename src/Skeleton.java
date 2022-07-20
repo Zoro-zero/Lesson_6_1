@@ -1,16 +1,21 @@
 public class Skeleton extends Boss{
-    public int getStrela() {
-        return strela;
+    private  int aroow;
+
+    public int getAroow() {
+        return aroow;
     }
 
-    public void setStrela(int strela) {
-        this.strela = strela;
+    public void setAroow(int aroow) {
+        this.aroow = aroow;
     }
 
-    private int strela;
-    @Override
-    public String printinfo() {
-        return super.printinfo();
 
+    public Skeleton(int health, int damage, int aroow) {
+        super(health, damage);
+        this.aroow = aroow;
+    }
+
+    public String info (){
+        return super.info() + " " + aroow;
     }
 }
